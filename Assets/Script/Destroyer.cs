@@ -7,7 +7,6 @@ public class Destroyer : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.position.z < player.transform.position.z - 30){
