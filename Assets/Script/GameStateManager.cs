@@ -37,7 +37,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0; // Ensure game is paused immediately on start
+        Time.timeScale = 0;
         ChangeState(GameState.MainMenu);
     }
 
@@ -50,9 +50,7 @@ public class GameStateManager : MonoBehaviour
 
     public void ChangeToMainMenu()
     {
-        // Reset any game-specific variables here
         Time.timeScale = 0;
-        // Reload the current scene to reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
         ChangeState(GameState.MainMenu);
     }
@@ -74,11 +72,8 @@ public class GameStateManager : MonoBehaviour
 
     public void RestartGame()
     {
-        // Reset any game-specific variables here
         Time.timeScale = 1;
-        // Reload the current scene to reset everything
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
-        // Change to playing state after scene reload
         ChangeState(GameState.Playing);
     }
 
