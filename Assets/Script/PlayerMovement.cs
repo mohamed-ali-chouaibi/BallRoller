@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour{
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void FixedUpdate(){
         ForwardMovement();
 
